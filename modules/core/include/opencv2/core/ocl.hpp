@@ -251,6 +251,8 @@ public:
     void* ptr() const;
 
     friend void initializeContextFromHandle(Context& ctx, void* platform, void* context, void* device);
+	
+	void initContextFromHandle(void* platform, void* context, void* device);
 
     bool useSVM() const;
     void setUseSVM(bool enabled);

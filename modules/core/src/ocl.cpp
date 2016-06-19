@@ -2861,6 +2861,10 @@ Program Context::getProg(const ProgramSource& prog,
     return p ? p->getProg(prog, buildopts, errmsg) : Program();
 }
 
+void Context::initContextFromHandle(void* platform, void* context, void* device)
+{
+	initializeContextFromHandle(*this, platform, context, device);
+}
 
 
 #ifdef HAVE_OPENCL_SVM
